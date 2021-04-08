@@ -38,6 +38,4 @@ func main(){
 	println(x)
 	x, y := 200, "string2"
 	println(x, y)
-
-
 }
