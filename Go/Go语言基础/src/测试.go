@@ -1,37 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func main(){
-	//var e float64 = 0.5468465
-	//var a float64 = 1123
-	//
-	//fmt.Printf("%T, %.3f\n", a-e, a-e)
-	//
-	//
-	//
-	//i := true
-	//
-	//if i {
-	//	fmt.Printf("%T, %.3f\n", a-e, a-e)
-	//}
-	//
-	//var str string = "测"
-	//var str1 string = "试"
-	//
-	//
-	//println(str + str1)
+func main() {
+	num := 75
+	switch { // expression is omitted
+	case num >= 0 && num <= 50:
+		fmt.Println("num is greater than 0 and less than 50")
+	case num >= 51 && num <= 100:
+		fmt.Println("num is greater than 51 and less than 100")
+	case num >= 101:
+		fmt.Println("num is greater than 100")
+	}
 
-	// 准备一个字符串类型
-	var house = "Malibu Point 10880, 90265"
-	// 对字符串取地址, ptr类型为*string
-	ptr := &house
-	// 打印ptr的类型
-	fmt.Printf("ptr type: %T\n", ptr)
-	// 打印ptr的指针地址
-	fmt.Printf("address: %p\n", ptr)
-
-	value := *ptr
-	fmt.Printf("value type: %T\n", value)
-	fmt.Printf("value : %s\n", value)
 }
