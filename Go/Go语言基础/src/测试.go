@@ -3,12 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	var a [3]int
-	fmt.Println(a[0])
-	fmt.Println(a[len(a)-1])
+	var a = []int{1, 2, 3, 4, 5}
 
-	for k, v := range a {
-		fmt.Printf("键为：%v, 值为: %v", k, v)
-	}
+	a = append(a[:2], append([]int{6, 7, 8}, a[2:]...)...)
 
+	fmt.Println(a)
 }
